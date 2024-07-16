@@ -4,6 +4,8 @@
 
 The Shopper is platform that would allow users to create their own customized online stores using a modular approach.
 
+<img src="2-Modular-Web-Design-Gif.gif" width="200">
+
 ## Features
 
 1. User Registration and Authentification
