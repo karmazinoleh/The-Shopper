@@ -1,5 +1,7 @@
 # The Shopper
 
+## WORK IN PROGRESS
+
 ## Overview
 
 The Shopper is platform that would allow users to create their own customized online stores using a modular approach.
