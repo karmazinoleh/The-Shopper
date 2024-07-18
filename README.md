@@ -7,9 +7,7 @@ The Shopper is platform that would allow users to create their own customized on
 <img src="2-Modular-Web-Design-Gif.gif" width="200">
 
 ## WORK IN PROGRESS
-Work still in progress on Security part of the application! There is much more to be done. 
-
-I hope will end Security/aut configuration part by the end of this week.
+There is much more to be done. 
 Next:
 1. Registration with Email
 2. CRUD of shop page
