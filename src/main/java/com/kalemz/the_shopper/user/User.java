@@ -53,7 +53,7 @@ public class User implements UserDetails, Principal{
     @Column(insertable = false)
     private LocalDateTime lastModifiedDate;
 
-    private String getFullName(){
+    public String getFullName(){
         return firstname + " " + lastname;
     }
 
