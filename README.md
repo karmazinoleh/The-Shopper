@@ -9,9 +9,13 @@ The Shopper is platform that would allow users to create their own customized on
 ## WORK IN PROGRESS
 There is much more to be done. 
 Next:
-1. Registration with Email <img src="gitrepo/email-confirm.png" width="200">
+1. Registration with Email 
+<br/>
+<img src="gitrepo/email-confirm.png" width="600">
 2. CRUD of shop page
+<br/>
 3. Main page
+<br/>
 4. Create basic modules
 ...
 
