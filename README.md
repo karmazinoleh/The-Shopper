@@ -4,18 +4,14 @@
 
 The Shopper is platform that would allow users to create their own customized online stores using a modular approach.
 
-<img src="gitrepo/2-Modular-Web-Design-Gif.gif" width="200">
+<img src="2-Modular-Web-Design-Gif.gif" width="200">
 
 ## WORK IN PROGRESS
 There is much more to be done. 
 Next:
-1. Registration with Email 
-<br/>
-<img src="gitrepo/email-confirm.png" width="600">
+1. Registration with Email
 2. CRUD of shop page
-<br/>
 3. Main page
-<br/>
 4. Create basic modules
 ...
 
