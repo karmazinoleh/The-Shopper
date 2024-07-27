@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Shopper is platform that would allow users to create their own customized online stores using a modular approach.
+The Shopper platform would allow users to create their own customized online stores using a modular approach.
 
 <img src="gitrepo/2-Modular-Web-Design-Gif.gif" width="200">
 
@@ -23,7 +23,7 @@ Next:
 ## Features
 
 1. User Registration and Authentification
-2. Store Creation and Managment with pre-buikt modules, product pages, shopping carts etc.
+2. Store Creation and Management with pre-built modules, product pages, shopping carts, etc.
 3. Sales Analytics
 
 ## Technology Stack
@@ -32,3 +32,12 @@ Next:
 - Angular framework for Frontend
 - Docker
 - JWT Authentication
+
+## HOW TO USE?
+
+1. Setup your docker with docker-compose.yml
+2. Start TheShopperApplication
+3. Start your PostgreSQL DB.
+
+...
+_This part will be receiving updates along with the project._
