@@ -3,10 +3,7 @@ package com.kalemz.the_shopper.shop;
 
 import com.kalemz.the_shopper.user.User;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
@@ -20,16 +17,17 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Data
 public class Shop {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String shopName;
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
-    private User user;
+    private User owner;
 
     private boolean shareable;
 

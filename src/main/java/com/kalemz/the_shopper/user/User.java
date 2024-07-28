@@ -1,6 +1,7 @@
 package com.kalemz.the_shopper.user;
 
 import com.kalemz.the_shopper.role.Role;
+import com.kalemz.the_shopper.shop.Shop;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -15,6 +16,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Getter
@@ -38,6 +40,8 @@ public class User implements UserDetails, Principal {
     private String password;
     private boolean accountLocked;
     private boolean enabled;
+    @OneToMany(mappedBy = "owner")
+    private Set<Shop> shops;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
