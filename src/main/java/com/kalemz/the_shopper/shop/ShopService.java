@@ -23,7 +23,7 @@ public class ShopService {
         shop.setShopName(request.getName());
         shop.setCreatedBy(user.getId());
         shop.setCreatedDate(LocalDateTime.now());
-        shop.setUser(user);
+        shop.setOwner(user);
         return shopRepository.save(shop).getId();
     }
 
