@@ -6,25 +6,32 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
-import java.util.Date;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 @Transactional
 public class ShopService {
 
-    private final ShopRepository ShopRepository;
     private final ShopRepository shopRepository;
+    private final ShopMapper shopMapper;
 
-    public Integer addShop(ShopRequest request, Authentication authentication){
-        User user = (User) authentication.getPrincipal();
-        Shop shop = new Shop();
-        shop.setShopName(request.getName());
-        shop.setCreatedBy(user.getId());
-        shop.setCreatedDate(LocalDateTime.now());
+    public Integer addShop(ShopRequest request, Authentication connectedUser) {
+        User user = ((User) connectedUser.getPrincipal());
+        Shop shop = shopMapper.toShop(request);
         shop.setOwner(user);
         return shopRepository.save(shop).getId();
     }
 
+    public List<Shop> getAllShops() {
+        return shopRepository.findAll();
+    }
+
+    public Shop getShopById(Integer id) {
+        return shopRepository.findById(id).orElseThrow(() -> new RuntimeException("Shop not found"));
+    }
+
+    public void deleteShop(Integer id) {
+        shopRepository.deleteById(id);
+    }
 }

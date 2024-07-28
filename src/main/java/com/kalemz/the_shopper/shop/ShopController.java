@@ -1,23 +1,36 @@
 package com.kalemz.the_shopper.shop;
 
-import io.swagger.v3.oas.annotations.tags.Tag;
+
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("shops")
 @RequiredArgsConstructor
-@Tag(name = "shop")
 public class ShopController {
 
     private final ShopService service;
 
+    @PostMapping
+    public Integer createShop(@RequestBody ShopRequest shopRequest, Authentication authentication) {
+        return service.addShop(shopRequest, authentication);
+    }
+
     @GetMapping
-    public List<Shop> getShops() {
-        return null;
+    public List<Shop> getAllShops() {
+        return service.getAllShops();
+    }
+
+    @GetMapping("/{id}")
+    public Shop getShopById(@PathVariable Integer id) {
+        return service.getShopById(id);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteShop(@PathVariable Integer id) {
+        service.deleteShop(id);
     }
 }
