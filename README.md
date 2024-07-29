@@ -24,7 +24,7 @@ Next:
 <img src="gitrepo/email-confirm.png" width="600">
 </br>
 2. User Registration and Authentification
-
+<img src="gitrepo/login-page" width="600">
 </br>
 3. Store Creation and Management with pre-built modules, product pages, shopping carts, etc.
 </br>
