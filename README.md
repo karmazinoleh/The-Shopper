@@ -9,22 +9,28 @@ The Shopper platform would allow users to create their own customized online sto
 ## WORK IN PROGRESS
 There is much more to be done. 
 Next:
-1. Registration with Email
-<img src="gitrepo/email-confirm.png" width="600">
 </br>
-2. CRUD of shop page
+1. CRUD of shop page
 </br>
-3. Main page
+2. Main page
 </br>
-4. Create basic modules
+3. Create basic modules
 </br>
 ...
 
 ## Features
 
-1. User Registration and Authentification
-2. Store Creation and Management with pre-built modules, product pages, shopping carts, etc.
-3. Sales Analytics
+1. Registration with Email
+<img src="gitrepo/email-confirm.png" width="600">
+</br>
+2. User Registration and Authentification
+
+</br>
+3. Store Creation and Management with pre-built modules, product pages, shopping carts, etc.
+</br>
+4. Sales Analytics
+</br>
+
 
 ## Technology Stack
 
