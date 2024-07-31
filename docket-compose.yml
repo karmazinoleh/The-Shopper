@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   postgres:
-    container_name: postgres-sql
+    container_name: postgres-sql1
     image: postgres
     environment:
       POSTGRES_USER: kalemz
@@ -18,7 +18,7 @@ services:
     restart: unless-stopped
 
   mail-dev:
-    container_name: mail-dev-shopper
+    container_name: mail-dev-shopper1
     image: maildev/maildev
     ports:
       - "1080:1080"

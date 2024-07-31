@@ -1,0 +1,10 @@
+<div class="editor">
+  <div class="module-list">
+    <button (click)="addModule('square')">Add Square</button>
+    <!-- todo: more flexible creation with component -->
+  </div>
+  <div class="canvas" #canvas>
+    <p *ngFor="let module of modules">{{ module.type }}</p>
+  </div>
+  <button (click)="saveModules()">Save</button>
+</div>
