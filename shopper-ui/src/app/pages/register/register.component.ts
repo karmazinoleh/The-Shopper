@@ -25,7 +25,7 @@ export class RegisterComponent {
     this.authenticationService.register({
       body: this.registerRequest,
     }).subscribe({next: (response) => {
-      this.router.navigate(['api/v1/auth/activate-account']);
+      this.router.navigate(['activate-account']);
       },
       error: error => {
       this.errorMessage = error.error.validationErrors;
