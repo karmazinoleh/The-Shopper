@@ -42,4 +42,7 @@ public class Shop {
     @CreatedBy
     private Long createdBy;
 
+    @Lob
+    private String modules;
+
 }
