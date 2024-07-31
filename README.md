@@ -9,13 +9,9 @@ The Shopper platform would allow users to create their own customized online sto
 ## WORK IN PROGRESS
 There is much more to be done. 
 Next:
-</br>
 1. CRUD of shop page
-</br>
 2. Main page
-</br>
 3. Create basic modules
-</br>
 ...
 
 ## Features
