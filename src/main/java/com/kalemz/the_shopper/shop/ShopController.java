@@ -14,6 +14,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("shops")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:4200")
 public class ShopController {
 
     private final ShopService service;
@@ -39,12 +40,10 @@ public class ShopController {
         service.deleteShop(id);
     }
 
-    @PutMapping("/{id}")
-    public void saveModules(@PathVariable Integer id, @RequestBody Map<String, Object> request) throws JsonProcessingException, JsonProcessingException {
-        Shop shop = shopRepository.findById(id).orElseThrow(() -> new RuntimeException("Shop not found"));
-        String modules = new ObjectMapper().writeValueAsString(request.get("modules"));
-        shop.setModules(modules);
-        shopRepository.save(shop);
+    @PutMapping("/{id}/modules")
+    public void saveModules(@PathVariable Integer id, @RequestBody Map<String, String> request) {
+        String modules = request.get("modules");
+        service.updateModules(id, modules);
     }
 
 }

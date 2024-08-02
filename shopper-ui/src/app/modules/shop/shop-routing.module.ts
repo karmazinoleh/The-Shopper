@@ -5,7 +5,7 @@ import {EditorComponent} from "./pages/editor/editor.component";
 
 const routes: Routes = [
   {path: '', component: MainComponent},
-  //{path: 'editor', component: EditorComponent}, todo
+  {path: 'editor', component: EditorComponent},
 ];
 
 @NgModule({

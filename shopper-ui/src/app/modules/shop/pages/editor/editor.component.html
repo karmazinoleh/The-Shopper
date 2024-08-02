@@ -1,1 +1,11 @@
-<p>editor works!</p>
+<div class="editor">
+  <div class="module-list">
+    <button (click)="addModule('square')">Add Square</button>
+    <button (click)="addModule('bigSquare')">Add BigSquare</button>
+    <!-- todo: more flexible creation of components -->
+  </div>
+  <div class="canvas" #canvas>
+    <p *ngFor="let module of modules">{{ module.type }}</p>
+  </div>
+  <button (click)="saveModules()">Save</button>
+</div>

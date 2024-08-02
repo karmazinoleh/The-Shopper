@@ -34,4 +34,11 @@ public class ShopService {
     public void deleteShop(Integer id) {
         shopRepository.deleteById(id);
     }
+
+    public void updateModules(Integer id, String modules) {
+        Shop shop = shopRepository.findById(id).orElseThrow(() -> new RuntimeException("Shop not found"));
+        shop.setModules(modules);
+        shopRepository.save(shop);
+    }
+
 }
